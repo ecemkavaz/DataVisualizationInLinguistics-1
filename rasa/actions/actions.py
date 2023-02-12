@@ -29,7 +29,7 @@ import re
 import requests
 import random
 
-domainUrl = "http://localhost:8000/"
+domainUrl = "https://web-eduvives.cloud.okteto.net/"
 from cryptography.fernet import Fernet
 
 
