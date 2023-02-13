@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   rasa:
-    image: rasa-server-okteto:latest
+    image: rasa-server:latest
     build: .
     volumes:
     - ./rasa/data:/code/data
@@ -14,7 +14,7 @@ services:
     networks:
       - all
   rasa-actions:
-    image: rasa-server-okteto:latest
+    image: rasa-server:latest
     build: .
     volumes:
       - ./rasa/actions:/code/actions
