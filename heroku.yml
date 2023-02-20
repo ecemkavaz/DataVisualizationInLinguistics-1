@@ -1,0 +1,21 @@
+build:
+  docker:
+    web: Dockerfile
+  config:
+    rasa: docker-compose.yml
+
+run:
+  web:
+    command:
+      - start.sh
+    env:
+      PYTHONUNBUFFERED: 1
+    services:
+      - db
+      - rasa
+      - rasa-actions
+    addons:
+      postgresql: "12"
+    network:
+      attach:
+        all
