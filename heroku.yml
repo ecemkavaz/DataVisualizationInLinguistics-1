@@ -9,4 +9,4 @@ run:
     command:
       - sh
       - ./start.sh
-    config: rasa
+
