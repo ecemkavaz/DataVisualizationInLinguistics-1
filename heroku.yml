@@ -7,4 +7,6 @@ build:
 run:
   web:
     command:
-      - start.sh
+      - sh
+      - ./start.sh
+    config: rasa
