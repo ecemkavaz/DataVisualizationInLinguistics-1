@@ -1,12 +1,22 @@
 build:
   docker:
     web: Dockerfile
-  config:
-    rasa: docker-compose.yml
-
 run:
-  web:
-    command:
-      - ./start.sh
+  web: docker-compose up web
 
+
+
+
+
+#build:
+#  docker:
+#    web: Dockerfile
+#  config:
+#    rasa: docker-compose.yml
+#
+#run:
+#  web:
+#    command:
+#      - ./start.sh
+#
 
