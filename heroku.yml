@@ -7,5 +7,6 @@ build:
 run:
   web:
     command:
-      - start.sh
+      - ./start.sh
+
 
