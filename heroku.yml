@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: docker-compose up
+   web: docker-compose -f docker-compose.yml up
 
 #build:
 #  docker:
