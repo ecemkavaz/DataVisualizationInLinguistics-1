@@ -6,25 +6,19 @@
 
 build:
   docker:
-    - context: .
-      dockerfile: Dockerfile
-      target: rasa
-    - context: .
-      dockerfile: Dockerfile
-      target: rasa-actions
-    - context: .
-      dockerfile: Dockerfile
-      target: web
+    web: Dockerfile
+  config:
+    PYTHONUNBUFFERED: "1"
+  options:
+    docker:
+      memory: "2g"
+      network: all
 run:
-  - type: web
-    command: python manage.py makemigrations DataVisualization && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT
-  - type: rasa
-    command: bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p $PORT"
-  - type: rasa-actions
-    command: bash -c "rasa run actions"
+  web: bash -c "python manage.py makemigrations DataVisualization && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"
+  rasa: bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p $PORT"
+  rasa-actions: rasa run actions
 addons:
-  - plan: heroku-postgresql
-    as: DATABASE
+  heroku-postgresql:dev
 
 
 
