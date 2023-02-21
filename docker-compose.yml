@@ -26,7 +26,6 @@ services:
       - all
   db:
     image: postgres
-    build: .
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
