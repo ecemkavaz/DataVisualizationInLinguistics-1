@@ -9,16 +9,12 @@ build:
     web: Dockerfile
   config:
     PYTHONUNBUFFERED: "1"
-  options:
-    docker:
-      memory: "2g"
-      network: all
+
 run:
   web: bash -c "python manage.py makemigrations DataVisualization && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"
   rasa: bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p $PORT"
   rasa-actions: rasa run actions
-addons:
-  heroku-postgresql:dev
+
 
 
 
