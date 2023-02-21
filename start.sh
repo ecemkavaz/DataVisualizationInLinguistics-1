@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # start your application
-python apps.py
+python manage.py runserver
+
