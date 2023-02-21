@@ -6,25 +6,7 @@
 
 build:
   docker:
-    web: ./Dockerfile
-
-
-run:
-  rasa-actions:
-    command:
-      - rasa run actions
-    image: ecemkavaz/rasa-server
-
-  web:
-    command:
-      - python manage.py runserver 0.0.0.0:$PORT
-    image: ecemkavaz/datavisualizationinlinguistics-1_web
-
-  rasa:
-    command:
-      - bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p $PORT"
-    image: ecemkavaz/rasa-server
-
+    web: docker-compose.yml
 
 
 
