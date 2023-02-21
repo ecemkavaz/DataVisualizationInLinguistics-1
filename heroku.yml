@@ -9,18 +9,17 @@ build:
     web: ./Dockerfile
 run:
   web:
-    image: datavisualizationinlinguistics-1_web
+    image: <datavisualizationinlinguistics-1_web>
     command:
      - python manage.py runserver 0.0.0.0:$PORT
   rasa:
-    image: rasa-server
+    image: <rasa-server>
     command:
       - bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p $PORT"
   rasa-actions:
-    image: rasa-server
     command:
       - rasa run actions
-
+    image: <rasa-server>
 
 
 
