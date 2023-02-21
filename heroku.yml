@@ -1,12 +1,12 @@
-#build:
-#  docker:
-#    web: Dockerfile
-#run:
-#  web: docker-compose up web
-
 build:
   docker:
-    web: docker-compose.yml
+    web: Dockerfile
+run:
+  web: docker-compose up
+
+#build:
+#  docker:
+#    web: docker-compose.yml
 
 
 
