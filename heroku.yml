@@ -1,25 +1,31 @@
-build:
-  docker:
-    web: Dockerfile
-run:
-   web: docker-compose -f docker-compose.yml up
-
+#setup:
+#  addons:
+#    - plan: heroku-postgresql
+#      as: DATABASE
+#
 #build:
+#  docker:
+#    web: Dockerfile
+#
+##build:
 #  docker:
 #    web: docker-compose.yml
 
 
 
 
-#build:
-#  docker:
-#    web: Dockerfile
+build:
+  docker:
+    web: Dockerfile
 #  config:
 #    rasa: docker-compose.yml
 #
-#run:
-#  web:
-#    command:
-#      - ./start.sh
-#
+run:
+  web:
+    command:
+      - ./start.sh
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
 
