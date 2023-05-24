@@ -1495,9 +1495,6 @@ responses:
   utter_download_user_interaction:
     - text: "download_user_interaction;I downloaded your conversation please upload it to google forms"
 
-  utter_download_user_interaction:
-    - text: "download_user_interaction;I downloaded your conversation please upload it to google forms"
-
   utter_help_highlight_select_menus:
     - text: "Highlight colour features shows tagged features different colours in Glyphs \ \n
     
