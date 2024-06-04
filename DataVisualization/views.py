@@ -948,7 +948,7 @@ def get_chat_success_message(request, successName):
 
 
 def inject_text_conversation(session_id, textMsg):
-    url = 'https://rasa-152.42.143.156/conversations/' + session_id + '/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio'
+    url = 'https://152.42.143.156:5005/conversations/' + session_id + '/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio'
     json_msg = {
         "name": "generate_response_message",
         "entities": {
