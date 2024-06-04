@@ -13,6 +13,8 @@ services:
       - "5005:8080"
     networks:
       - all
+    depends_on:
+      - rasa-db
   rasa-actions:
     image: rasa-server-okteto:latest
     build: .
