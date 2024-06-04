@@ -34,6 +34,8 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./DataVisualization/postgres-data-rasa:/var/lib/postgresql/data
+    networks:
+      - all
   db:
     image: postgres
     environment:
