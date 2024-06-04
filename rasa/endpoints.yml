@@ -12,7 +12,7 @@
 
 
 action_endpoint:
-  url: "https://rasa-actions-152.42.143.156/webhook"
+  url: "https://152.42.143.156:5055/webhook"
 #  action_names:
 #    - action_save_chat_logs
 
