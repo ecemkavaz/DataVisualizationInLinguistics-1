@@ -39,7 +39,7 @@ ALLOWED_HOSTS = [
     '0.0.0.0',
     'datavisualizationinlinguistics.herokuapp.com',
     'web-eduvives.cloud.okteto.net', 'web-ecemkavaz.cloud.okteto.net',
-    '127.0.0.1', 'localhost'
+    '127.0.0.1', 'localhost', '152.42.143.156'
 ]
 
 # Application definition
