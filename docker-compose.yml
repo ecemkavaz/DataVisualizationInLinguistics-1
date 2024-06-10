@@ -35,7 +35,7 @@ services:
     volumes:
       - ./DataVisualization/postgres-data-rasa:/var/lib/postgresql/data
     ports:
-      - "5433:5432"
+      - "5435:5435"
     networks:
       - all
   db:
