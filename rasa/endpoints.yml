@@ -18,7 +18,7 @@ action_endpoint:
 
 tracker_store:
   type: custom
-  store_type: "custom_tracker_store.CustomSQLTrackerStore"
+  store_type: "rasa.custom_tracker_store.CustomSQLTrackerStore"
   dialect: "postgresql"
   url: "postgresql://postgres:postgres@rasa-db:5432/rasa" 
   db: "rasa"
