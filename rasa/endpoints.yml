@@ -17,8 +17,7 @@ action_endpoint:
 #    - action_save_chat_logs
 
 tracker_store:
-  type: custom
-  store_type: "rasa.custom_tracker_store.CustomSQLTrackerStore"
+  type: "rasa.custom_tracker_store.CustomSQLTrackerStore"
   dialect: "postgresql"
   url: "postgresql://postgres:postgres@rasa-db:5432/rasa" 
   db: "rasa"
